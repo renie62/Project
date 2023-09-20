@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export const newRequest = axios.create({
-  baseURL: "http://localhost:4600/api",
+  baseURL: "https://mern-server-pgto.onrender.com/api",
   withCredentials: true,
 });
