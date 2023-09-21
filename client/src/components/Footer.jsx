@@ -6,8 +6,11 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 import RoomIcon from "@mui/icons-material/Room";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+
   return (
     <>
       <div className="flex justify-center dark:bg-black/90 dark:text-white">
@@ -34,15 +37,33 @@ const Footer = () => {
           <div className="flex flex-col sm:items-start items-center">
             <h1 className="font-medium sm:mb-5 mb-2">Useful Links</h1>
             <ul className="text-gray-400 font-light">
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#menu">Menu</a>
-              </li>
+              {pathname !== "/" ? (
+                <Link to="/">
+                  <li>Home</li>
+                </Link>
+              ) : (
+                <li>
+                  <a href="#">Home</a>
+                </li>
+              )}
+              {pathname !== "/" ? (
+                <Link to="/">
+                  <li>About</li>
+                </Link>
+              ) : (
+                <li>
+                  <a href="#about">About</a>
+                </li>
+              )}
+              {pathname !== "/" ? (
+                <Link to="/">
+                  <li>Menu</li>
+                </Link>
+              ) : (
+                <li>
+                  <a href="#menu">Menu</a>
+                </li>
+              )}
             </ul>
           </div>
           <div className="flex flex-col sm:items-start items-center">

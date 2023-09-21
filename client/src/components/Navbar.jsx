@@ -94,7 +94,12 @@ const Navbar = () => {
               </Link>
             ) : (
               <li>
-                <a href="#">Home</a>
+                <a
+                  className="cursor-pointer hover:text-blue-700 hover:pb-1 hover:border-b-2 hover:border-blue-700 dark:hover:text-green-700 dark:hover:border-green-700"
+                  href="#"
+                >
+                  Home
+                </a>
               </li>
             )}
             {pathname !== "/" ? (
@@ -103,7 +108,12 @@ const Navbar = () => {
               </Link>
             ) : (
               <li>
-                <a href="#about">About</a>
+                <a
+                  className="cursor-pointer hover:text-blue-700 hover:pb-1 hover:border-b-2 hover:border-blue-700 dark:hover:text-green-700 dark:hover:border-green-700"
+                  href="#about"
+                >
+                  About
+                </a>
               </li>
             )}
             {pathname !== "/" ? (
@@ -112,7 +122,12 @@ const Navbar = () => {
               </Link>
             ) : (
               <li>
-                <a href="#menu">Menu</a>
+                <a
+                  className="cursor-pointer hover:text-blue-700 hover:pb-1 hover:border-b-2 hover:border-blue-700 dark:hover:text-green-700 dark:hover:border-green-700"
+                  href="#menu"
+                >
+                  Menu
+                </a>
               </li>
             )}
             {currentUser && (
